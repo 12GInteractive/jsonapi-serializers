@@ -1,6 +1,6 @@
-require 'factory_girl'
+require 'factory_bot'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :post, class: MyApp::Post do
     skip_create
     sequence(:id) {|n| n }
