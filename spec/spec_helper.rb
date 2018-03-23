@@ -1,10 +1,12 @@
 require 'factory_bot'
+require 'rspec-benchmark'
 require './lib/jsonapi-serializers'
 require './spec/support/serializers'
 require './spec/support/serializer_spec_helpers'
 
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
+  config.include RSpec::Benchmark::Matchers
   config.include SerializerSpecHelpers
 
   config.mock_with :rspec do |mocks|

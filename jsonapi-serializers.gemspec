@@ -26,4 +26,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "activemodel", "~> 4.2"
   spec.add_development_dependency "pry", '~> 0.11.3'
   spec.add_development_dependency "pry-byebug", '~> 3.6.0'
+  spec.add_development_dependency "rspec-benchmark", '~> 0.3.0'
 end
