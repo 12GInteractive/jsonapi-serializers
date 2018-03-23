@@ -1,4 +1,5 @@
 require 'factory_bot'
+require 'pry'
 
 FactoryBot.define do
   factory :post, class: MyApp::Post do
