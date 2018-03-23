@@ -1,9 +1,11 @@
 require 'factory_girl'
 require './lib/jsonapi-serializers'
 require './spec/support/serializers'
+require './spec/support/serializer_spec_helpers'
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
+  config.include SerializerSpecHelpers
 
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true

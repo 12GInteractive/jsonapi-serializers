@@ -3,10 +3,6 @@ require 'active_model/naming'
 require 'active_model/translation'
 
 describe JSONAPI::Serializer do
-  def serialize_primary(object, options = {})
-    # Note: intentional high-coupling to protected method for tests.
-    JSONAPI::Serializer.send(:serialize_primary, object, options)
-  end
 
   describe 'internal-only serialize_primary' do
     it 'serializes nil to nil' do
