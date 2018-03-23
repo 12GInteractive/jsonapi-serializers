@@ -11,6 +11,13 @@ FactoryBot.define do
     trait :with_author do
       association :author, factory: :user
     end
+
+    trait :with_long_comments do
+      after(:create) do |object|
+        long_comments = create_list(:long_comment, 2, post: object)
+        object.long_comments = long_comments
+      end
+    end
   end
 
   # Post with some added property to test inheritance in serializer.
